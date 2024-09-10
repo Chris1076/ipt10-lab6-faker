@@ -1,0 +1,20 @@
+{
+    "name": "aufccs/ipt10-lab6-faker",
+    "description": "IPT10 Lab6 Faker",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aufccs\\Ipt10Lab6Faker\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Christian San Gabriel"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "fakerphp/faker": "^1.23"
+    }
+}
