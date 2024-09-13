@@ -1,16 +1,21 @@
 <?php
-session_start();
 class FileAccessor{
     public static $variabble;
 
     public static function getFile(){
         $file = fopen("persons.csv", "r");
-        $_SESSION['personsource'] = $file;
+        return $file;
+        fclose($file);
     }
-    public static function appendFile($entry){
+    public static function getFile_append(){
         $file = fopen("persons.csv", "a");
+        return $file;
+        fclose($file);
+    }
+
+    public static function appendFile($file, $entry){
         fputcsv($file, $entry);
-        $_SESSION['persontarget'] = $file;
+        fclose($file);
     }
     public static function writeFile(){
 
